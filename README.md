@@ -10,7 +10,7 @@ Este é um desafio técnico para candidatos à vaga de **Desenvolvedor(a) React 
 
 Construir um app mobile com React Native (Expo) que:
 
-- Apresente perguntas ao usuário
+- Apresente perguntas ao usuário (mínimo 5 perguntas)
 - Para cada resposta, leve a uma próxima pergunta diferente
 - Finalize o quiz quando chegar a uma resposta final
 
