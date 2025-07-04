@@ -32,7 +32,6 @@ Construir um app mobile com React Native (Expo) que:
 - Animações de transição entre perguntas (ex: com `react-native-reanimated`)
 - Uso de `Context` ou `Zustand` para controle de estado
 - Layout agradável e responsivo
-- Versão disponível no **Expo Go** ou **Snack**
 
 ---
 
