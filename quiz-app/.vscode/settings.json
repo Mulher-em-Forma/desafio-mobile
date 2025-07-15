@@ -1,0 +1,22 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.sortMembers": "explicit"
+  },
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Fira Code",
+  "beautify.onSave": true,
+  "editor.formatOnSave": true,
+  // You can auto format any files based on the file extensions type.
+  "beautify.JSfiles": [
+    "js",
+    "jsx",
+    "json",
+    "jsbeautifyrc",
+    "jshintrc",
+    "ts",
+    "tsx"
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
