@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "Qual é a capital do Brasil?",
+    "options": [
+      { "id": "a", "text": "São Paulo" },
+      { "id": "b", "text": "Rio de Janeiro" },
+      { "id": "c", "text": "Brasília" },
+      { "id": "d", "text": "Belo Horizonte" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Brasília é a capital federal do Brasil desde 1960."
+  },
+  {
+    "id": 2,
+    "question": "Quem pintou a Mona Lisa?",
+    "options": [
+      { "id": "a", "text": "Vincent van Gogh" },
+      { "id": "b", "text": "Leonardo da Vinci" },
+      { "id": "c", "text": "Pablo Picasso" },
+      { "id": "d", "text": "Michelangelo" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Leonardo da Vinci pintou a Mona Lisa entre 1503 e 1519."
+  },
+  {
+    "id": 3,
+    "question": "Qual é o maior planeta do sistema solar?",
+    "options": [
+      { "id": "a", "text": "Terra" },
+      { "id": "b", "text": "Saturno" },
+      { "id": "c", "text": "Júpiter" },
+      { "id": "d", "text": "Netuno" }
+    ],
+    "correctAnswer": "c",
+    "explanation": "Júpiter é o maior planeta do sistema solar, com mais de 11 vezes o diâmetro da Terra."
+  },
+  {
+    "id": 4,
+    "question": "Em que ano o homem pisou na Lua pela primeira vez?",
+    "options": [
+      { "id": "a", "text": "1967" },
+      { "id": "b", "text": "1969" },
+      { "id": "c", "text": "1971" },
+      { "id": "d", "text": "1973" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "Neil Armstrong e Buzz Aldrin pisaram na Lua em 20 de julho de 1969, durante a missão Apollo 11."
+  },
+  {
+    "id": 5,
+    "question": "Qual é o elemento químico representado pelo símbolo 'O'?",
+    "options": [
+      { "id": "a", "text": "Ouro" },
+      { "id": "b", "text": "Oxigênio" },
+      { "id": "c", "text": "Osmium" },
+      { "id": "d", "text": "Óxido" }
+    ],
+    "correctAnswer": "b",
+    "explanation": "O símbolo 'O' representa o Oxigênio na tabela periódica."
+  }
+]
