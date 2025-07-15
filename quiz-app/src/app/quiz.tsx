@@ -1,4 +1,4 @@
-import AnimatedQuestion from "@/components/question";
+import AnimatedQuestion from "@/components/animated-question";
 import { questions } from "@/data/questions";
 import { useQuizStore } from "@/store/useQuizStore";
 import { useRouter } from "expo-router";
@@ -10,11 +10,15 @@ export default function Index() {
 
   const question = questions[currentQuestionId];
 
-  const handleAnswer = (answer: string | string[], nextId: string) => {
-    addAnswer({ questionId: question.id, answer });
+  const handleAnswer = (
+    questionText: string,
+    answer: string | string[],
+    nextId: string
+  ) => {
+    addAnswer({ question: questionText, questionId: question.id, answer });
 
     if (nextId.startsWith("result")) {
-      //router.push("/result");
+      router.push("/confirm");
     } else {
       setCurrentQuestion(nextId);
     }

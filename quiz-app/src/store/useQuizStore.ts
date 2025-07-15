@@ -3,6 +3,7 @@ import { create } from "zustand";
 type AnswerEntry = {
   questionId: string;
   answer: string | string[];
+  question: string;
 };
 
 type QuizStore = {

@@ -13,7 +13,11 @@ import { styles } from "./style";
 
 type Props = {
   question: Question;
-  onAnswer: (answerText: string | string[], nextId: string) => void;
+  onAnswer: (
+    questionText: string,
+    answerText: string | string[],
+    nextId: string
+  ) => void;
 };
 
 export default function AnimatedQuestion({ question, onAnswer }: Props) {
@@ -42,7 +46,8 @@ export default function AnimatedQuestion({ question, onAnswer }: Props) {
 
   const handleSubmit = () => {
     const nextId = question.answers[0].next;
-    onAnswer(selectedOptions, nextId);
+    const questionText = question.text;
+    onAnswer(questionText, selectedOptions, nextId);
   };
 
   return (
@@ -69,7 +74,7 @@ export default function AnimatedQuestion({ question, onAnswer }: Props) {
           <Button
             key={index}
             title={answer.text}
-            onPress={() => onAnswer(answer.text, answer.next)}
+            onPress={() => onAnswer(question.text, answer.text, answer.next)}
           />
         ))
       )}
