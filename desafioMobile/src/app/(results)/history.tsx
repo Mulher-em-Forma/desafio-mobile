@@ -18,7 +18,6 @@ export default function History(): React.JSX.Element {
 	const { history, loadHistory } = useQuiz()
 	const [expandedItems, setExpandedItems] = useState<ExpandedItem>({})
 
-	// Carregar histórico quando a tela entrar em foco
 	useFocusEffect(
 		useCallback(() => {
 			loadHistory()
@@ -83,7 +82,7 @@ export default function History(): React.JSX.Element {
 					<Text className="text-xl font-semibold text-white mt-4 text-center">
 						Nenhum histórico encontrado
 					</Text>
-					<Text className="text-gray-200 mt-2 text-center">
+					<Text className="text-muted mt-2 text-center">
 						Complete um quiz para ver seus resultados aqui
 					</Text>
 					<Button
@@ -116,7 +115,7 @@ export default function History(): React.JSX.Element {
 						<Text className="text-2xl font-bold text-white mb-2">
 							Histórico de Quizzes
 						</Text>
-						<Text className="text-gray-200">
+						<Text className="text-muted">
 							{history.length} {history.length === 1 ? 'tentativa' : 'tentativas'} realizadas
 						</Text>
 					</Animated.View>
@@ -142,7 +141,7 @@ export default function History(): React.JSX.Element {
 													item.score.percentage >= 60 ? 'bg-green-100' : 'bg-red-100'
 												}`}>
 													<Text className={`text-xs font-medium ${
-														item.score.percentage >= 60 ? 'text-green-800' : 'text-red-800'
+														item.score.percentage >= 60 ? AppColors.success : AppColors.error
 													}`}>
 														{item.score.percentage}%
 													</Text>

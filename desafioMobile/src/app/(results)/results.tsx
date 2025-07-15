@@ -14,7 +14,6 @@ export default function Results(): React.JSX.Element {
 	const { correct, total } = getScore()
 	const percentage = Math.round((correct / total) * 100)
 
-	// Salvar no histórico quando a tela carregar (apenas uma vez)
 	useEffect(() => {
 		if (questions.length > 0 && answers.length > 0) saveToHistory()
 		// eslint-disable-next-line react-hooks/exhaustive-deps
