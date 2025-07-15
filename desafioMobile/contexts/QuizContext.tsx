@@ -45,7 +45,6 @@ export function QuizProvider({ children }: QuizProviderProps): React.JSX.Element
 		const currentQuestion = questions[currentQuestionIndex]
 		const isCorrect = selectedAnswer === currentQuestion.correctAnswer
 
-		// Valida a resposta com Zod
 		const userAnswer = UserAnswerSchema.parse({
 			questionId: currentQuestion.id,
 			selectedAnswer,
@@ -64,8 +63,6 @@ export function QuizProvider({ children }: QuizProviderProps): React.JSX.Element
 		setAnswers([])
 		setIsCompleted(false)
 		setSelectedAnswer(null)
-		// Não limpar as perguntas para evitar reload
-		// setQuestions([])
 	}, [])
 
 	const getScore = useCallback((): { correct: number; total: number } => {

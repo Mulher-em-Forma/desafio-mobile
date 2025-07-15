@@ -76,7 +76,6 @@ export default function Results(): React.JSX.Element {
 					showsVerticalScrollIndicator={false}
 					contentContainerClassName="pb-8"
 				>
-					{/* Cabeçalho com pontuação */}
 					<Animated.View
 						entering={FadeInDown.duration(500)}
 						className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg mb-6 items-center border border-white/20"
@@ -107,7 +106,6 @@ export default function Results(): React.JSX.Element {
 						</View>
 					</Animated.View>
 
-					{/* Lista de perguntas e respostas */}
 					<Animated.View
 						entering={FadeInDown.delay(200)}
 						className="space-y-6"

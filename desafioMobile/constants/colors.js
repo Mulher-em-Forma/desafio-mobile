@@ -1,4 +1,3 @@
-/* eslint-env node */
 // Cores compartilhadas para Tailwind e aplicação React Native
 const AppColors = {
 	primary: '#A244E3',

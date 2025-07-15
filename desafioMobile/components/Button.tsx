@@ -41,7 +41,6 @@ const variantTextClasses = {
 	ghost: 'text-primary'
 }
 
-// Função utilitária simples para combinar classes
 function cn(...classes: (string | undefined)[]): string {
 	return classes.filter(Boolean).join(' ')
 }
@@ -59,7 +58,6 @@ export function Button({
 	const sizeClass = sizeClasses[size]
 	const textSizeClass = textSizeClasses[size]
 
-	// Se bgColor for fornecido, usa ele, senão usa o variant
 	const backgroundClass = bgColor || variantClasses[variant]
 	const textColorClass = textColor || variantTextClasses[variant]
 

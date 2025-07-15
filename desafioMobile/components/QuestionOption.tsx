@@ -12,7 +12,8 @@ import { Option } from '../types/quiz'
 interface QuestionOptionProps {
 	option: Option
 	isSelected: boolean
-	onSelect: (optionId: string) => void
+	// eslint-disable-next-line no-unused-vars
+	onSelect: (id: string) => void
 	disabled?: boolean
 }
 
@@ -35,12 +36,10 @@ export function QuestionOption({
 	const handlePress = (): void => {
 		if (disabled) return
 
-		// Animação de feedback
 		scale.value = withSpring(0.95, { duration: 100 }, () => {
 			scale.value = withSpring(1, { duration: 100 })
 		})
 
-		// Chama a função de seleção
 		runOnJS(onSelect)(option.id)
 	}
 

@@ -44,6 +44,7 @@ export interface QuizContextType {
 	selectedAnswer: string | null
 	isAnswerSelected: boolean
 	loadQuestions: () => Promise<void>
+	// eslint-disable-next-line no-unused-vars
 	selectAnswer: (answerId: string) => void
 	nextQuestion: () => void
 	finishQuiz: () => void

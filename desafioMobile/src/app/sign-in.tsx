@@ -11,7 +11,6 @@ export default function SignIn(): React.JSX.Element {
 	const { resetQuiz } = useQuiz()
 
 	useEffect(() => {
-		// Reset do quiz quando entrar na tela de sign-in
 		resetQuiz()
 	}, [resetQuiz])
 

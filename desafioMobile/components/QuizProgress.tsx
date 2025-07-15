@@ -11,7 +11,7 @@ export function QuizProgress({ currentQuestion, totalQuestions }: QuizProgressPr
 	const progress = useSharedValue(0)
 
 	useEffect(() => {
-		progress.value = withTiming((currentQuestion + 1) / totalQuestions, { duration: 500 })
+		progress.value = withTiming((currentQuestion + 1) / totalQuestions, { duration: 300 })
 	}, [currentQuestion, totalQuestions, progress])
 
 	const animatedStyle = useAnimatedStyle(() => ({
