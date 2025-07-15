@@ -1,18 +1,24 @@
 import { LinearGradient } from 'expo-linear-gradient'
 import { router } from 'expo-router'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { SafeAreaView, Text, View, ScrollView, ColorValue } from 'react-native'
 import Animated, { FadeInDown } from 'react-native-reanimated'
 
-import { Button } from '../../components/Button'
-import { useQuiz } from '../../contexts/QuizContext'
+import { Button } from '../../../components/Button'
+import { useQuiz } from '../../../contexts/QuizContext'
 
 import { AppColors } from '@/constants/colors'
 
 export default function Results(): React.JSX.Element {
-	const { questions, answers, getScore } = useQuiz()
+	const { questions, answers, getScore, saveToHistory } = useQuiz()
 	const { correct, total } = getScore()
 	const percentage = Math.round((correct / total) * 100)
+
+	// Salvar no histórico quando a tela carregar (apenas uma vez)
+	useEffect(() => {
+		if (questions.length > 0 && answers.length > 0) saveToHistory()
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []) // Dependências vazias intencionalmente para executar apenas uma vez
 
 	const handleRestart = (): void => {
 		router.push('/sign-in')
@@ -171,10 +177,10 @@ export default function Results(): React.JSX.Element {
 
 					<Animated.View
 						entering={FadeInDown.delay(400)}
-						className="my-8"
+						className="my-8 space-y-4"
 					>
 						<Button
-							title="Fazer Quiz Novamente"
+							title="Iniciar Novo Quiz"
 							onPress={handleRestart}
 							variant="primary"
 							size="lg"

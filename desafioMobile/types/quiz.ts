@@ -29,11 +29,28 @@ export const QuizStateSchema = z.object({
 	isCompleted: z.boolean()
 })
 
+// Schema para validação do histórico
+export const QuizHistoryItemSchema = z.object({
+	id: z.string(),
+	date: z.string(),
+	score: z.object({
+		correct: z.number(),
+		total: z.number(),
+		percentage: z.number()
+	}),
+	answers: z.array(UserAnswerSchema),
+	questions: z.array(QuestionSchema)
+})
+
+export const QuizHistorySchema = z.array(QuizHistoryItemSchema)
+
 // Tipos TypeScript inferidos dos schemas
 export type Option = z.infer<typeof OptionSchema>
 export type Question = z.infer<typeof QuestionSchema>
 export type UserAnswer = z.infer<typeof UserAnswerSchema>
 export type QuizState = z.infer<typeof QuizStateSchema>
+export type QuizHistoryItem = z.infer<typeof QuizHistoryItemSchema>
+export type QuizHistory = z.infer<typeof QuizHistorySchema>
 
 // Tipos adicionais para o contexto
 export interface QuizContextType {
@@ -43,6 +60,7 @@ export interface QuizContextType {
 	isCompleted: boolean
 	selectedAnswer: string | null
 	isAnswerSelected: boolean
+	history: QuizHistory
 	loadQuestions: () => Promise<void>
 	// eslint-disable-next-line no-unused-vars
 	selectAnswer: (answerId: string) => void
@@ -50,4 +68,6 @@ export interface QuizContextType {
 	finishQuiz: () => void
 	resetQuiz: () => void
 	getScore: () => { correct: number; total: number }
+	saveToHistory: () => void
+	loadHistory: () => Promise<void>
 }

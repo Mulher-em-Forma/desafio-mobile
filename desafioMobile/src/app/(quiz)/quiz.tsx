@@ -38,7 +38,7 @@ export default function Quiz(): React.JSX.Element {
 	}
 
 	const handleGoToResults = (): void => {
-		router.push('/results')
+		router.push('/(results)/results')
 	}
 
 	const currentQuestion = questions[currentQuestionIndex]

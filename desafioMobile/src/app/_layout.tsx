@@ -10,7 +10,7 @@ export default function Layout(): React.JSX.Element {
 			<Stack screenOptions={{ headerShown: false }}>
 				<Stack.Screen name="sign-in" />
 				<Stack.Screen name="(quiz)" />
-				<Stack.Screen name="results" />
+				<Stack.Screen name="(results)" />
 			</Stack>
 		</QuizProvider>
 	)
