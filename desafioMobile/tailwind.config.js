@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const { AppColors } = require('./constants/colors.js')
+
 module.exports = {
   // NOTE: Update this to include the paths to all files that contain Nativewind classes.
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
@@ -6,16 +8,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: '#FFFFFF',
-        primary: "#A244E3",
-        secondary: "#EAA907",
-        terciary: "#F97316",
-        destructive: "#F04437",
-        error: "#F04437",
-        border: "#E4E7EC",
-        warning: "#F97316",
-        info: "#2970FE",
-        success: "#17B169",
+        background: AppColors.background,
+        primary: AppColors.primary,
+        secondary: AppColors.secondary,
+        terciary: AppColors.terciary,
+        destructive: AppColors.destructive,
+        error: AppColors.error,
+        border: AppColors.border,
+        muted: AppColors.muted,
+        'muted-foreground': AppColors['muted-foreground'],
+        warning: AppColors.warning,
+        info: AppColors.info,
+        success: AppColors.success,
       }
     },
   },
