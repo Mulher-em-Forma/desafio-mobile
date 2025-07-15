@@ -65,7 +65,7 @@ export default function History(): React.JSX.Element {
 				},
 				{
 					text: 'Sim',
-					onPress: () => router.push('/(quiz)/quiz')
+					onPress: () => router.push('/sign-in')
 				}
 			]
 		)
