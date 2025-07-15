@@ -1,50 +1,70 @@
-# Welcome to your Expo app 👋
+# 📱 Quiz App Interativo – React Native + Expo Router
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este projeto é um app de quiz interativo desenvolvido com **React Native** usando **Expo** e **expo-router**, onde cada resposta leva a uma próxima pergunta diferente. Ao final, o app exibe um resumo das respostas.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Tecnologias Utilizadas
 
-   ```bash
-   npm install
-   ```
+- **Expo** – ambiente de desenvolvimento
+- **React Native** com **TypeScript**
+- **expo-router** – navegação baseada em arquivos
+- **Zustand** – gerenciamento de estado global
+- **react-native-reanimated** – animações suaves entre perguntas
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## ✅ Funcionalidades
 
-In the output, you'll find options to open the app in a
+- Navegação condicional entre perguntas com base nas respostas
+- Suporte a perguntas com **múltiplas escolhas**
+- Armazenamento e exibição das respostas do usuário
+- Transições animadas entre telas
+- Layout simples, agradável e responsivo
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## ▶️ Como Rodar o Projeto
 
-## Get a fresh project
+### 1. Pré-requisitos
 
-When you're ready, run:
+- Node.js v22+
+
+### 2. Instalação e execução
 
 ```bash
-npm run reset-project
+npm install
+npx expo start --tunnel
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Abra com:
 
-## Learn more
+- **Expo Go** no celular:
+  - 📱 [Download para Android](https://play.google.com/store/apps/details?id=host.exp.exponent)
+  - 📱 [Download para iOS](https://apps.apple.com/app/expo-go/id982107779)
+- Ou em emulador Android/iOS
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🧠 Estrutura do Quiz
 
-## Join the community
+- As perguntas estão em `data/questions.ts`
+- Cada pergunta possui:
+  - `id`, `text`, `multiple` e `answers`
+- Cada `answer` leva a uma próxima pergunta (`next`)
+- Após a última (`q10`), o app redireciona para a tela `/result`
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📷 Visual do App
+
+- Transições animadas com `react-native-reanimated`
+- Componente `AnimatedQuestion` exibe perguntas de forma dinâmica
+- Componente `MultipleChoiceList` permite múltiplas seleções
+- Tela final lista todas as respostas e oferece opção de reinício
+
+---
+
+## 📝 Licença
+
+Este projeto foi criado como parte de um desafio técnico. Livre para estudos e adaptações.
